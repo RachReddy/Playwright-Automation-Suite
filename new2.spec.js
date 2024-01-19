@@ -9,3 +9,5 @@ test("test inputting json data", async ({page}) => {
 });
 
 
+//the below command is used to run this test file in terminal
+//npx playwright -g "test inputting json data"
