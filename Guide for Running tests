@@ -1,0 +1,16 @@
+Running tests in playwright 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     
+       COMMAND                            				                           DESCRIPTION
+npx playwright test 						                          		Runs all the tests in tests folder, on all browsers (chromium,firefox,webkit) in headless mode
+npx playwright test example.spec.js			                  		Runs a specific test file
+npx playwright test example						                      	Runs the test file which has the word example in its file name (use this when you dont recall the exact entire file name)
+npx playwright test -g "test title"				                  	Runs the specific test case with the mentioned "test title"
+npx playwright test --project=chromium                 				Runs on specific browser (in this case, runs the test only on chromium)
+npx playwright test --headed 					                      	Runs tests in headed mode (means, you can see the physical browser whindow while executing the test) 
+npx playwright test --debug			                      				Runs in debug mode, helps in trouble shooting. (When you run in debug mode, by default it runs in headed mode i.e, we can see the debug browser window)
+npx playwright test example.spec.js --debug		               	Runs a specific test file in debug mode
+npx playwright test example.spec.js:4 --debug		              Debug starting from a specific line no within a test
+
+
+(Note: By default, all execution is done in headless mode i.e, no GUI or browser, it runs in the backend which in case of automation is an advantage as it saves memory)
