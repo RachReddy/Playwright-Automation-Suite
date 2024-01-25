@@ -1,0 +1,22 @@
+How to Write tests
+=================================================================================================================================================================================================================
+
+Step 1 : Create a new file under tests folder.
+
+Step 2 : Add module 'playwright/test', by including the below line at the beginning of ur test file.
+         
+		 const {test,expect} = require('@playwright/test')  //this line imports the test modules
+
+Step 3 : Create a test block
+         
+		 test( 'test title' ,testFunction )
+		 
+		 eg:  test('My first test', async ({page}) =>{
+				await page.goto('https://google.com')
+				await expect(page).toHaveTitle('Google')
+			  })
+		 
+		 
+NOTE:
+- The keyword async before a function makes the function return a promise
+- The keyword await before a function makes the function wait for a promise.
